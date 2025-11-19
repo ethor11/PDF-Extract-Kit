@@ -1,4 +1,4 @@
-inputs: assets/demo/formula_detection
+inputs: assets/Financials
 outputs: outputs/pdf2markdown
 visualize: True
 merge2markdown: True
@@ -27,10 +27,12 @@ tasks:
   ocr:
     model: ocr_ppocr
     model_config:
-      lang: ch
+      lang: en
       show_log: True
       det_model_dir: models/OCR/PaddleOCR/det/ch_PP-OCRv4_det
-      rec_model_dir: models/OCR/PaddleOCR/rec/ch_PP-OCRv4_rec
+      rec_model_dir: models/OCR/PaddleOCR/rec/en_PP-OCRv4_rec
       det_db_box_thresh: 0.3
+      draw_img_save_dir: outputs/pdf2markdown/ocr_vis
+      save_crop_res: True
 
   

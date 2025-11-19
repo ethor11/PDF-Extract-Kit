@@ -1,3 +1,4 @@
+#inputs: assets/demo/table_parsing
 inputs: assets/demo/table_parsing
 outputs: outputs/table_parsing
 tasks:

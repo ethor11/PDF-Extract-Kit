@@ -5,8 +5,7 @@ import argparse
 
 sys.path.append(osp.join(os.path.dirname(os.path.abspath(__file__)), '..'))
 from pdf_extract_kit.utils.config_loader import load_config, initialize_tasks_and_models
-import pdf_extract_kit.tasks  # 确保所有任务模块被导入
-
+import pdf_extract_kit.tasks
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Run a task with a given configuration file.")
@@ -17,7 +16,6 @@ def main(config_path):
     config = load_config(config_path)
     task_instances = initialize_tasks_and_models(config)
 
-    # 从配置文件中获取输入数据路径
     input_data = config.get('inputs', None)
     result_path = config.get('outputs', 'outputs')
 
